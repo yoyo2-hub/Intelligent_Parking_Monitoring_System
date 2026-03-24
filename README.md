@@ -1,4 +1,5 @@
 # Intelligent_Parking_Monitoring_System (Vision-AI)
+
 **Project Overview**
 Searching for parking takes an average of 5 to 20 minutes per trip, increasing driver stress and CO₂ emissions. Our system provides a high-tech answer:
 Automated occupancy detection via advanced instance segmentation.
@@ -54,3 +55,12 @@ pip install -r requirements.txt
 2-Run Monitoring: Execute the main video analysis script.
 
 3-View Dashboard: Open the web interface to track parking status live.
+
+**Project Team**
+
+Chayma Dallel
+
+Emna Ghorbel
+
+Amir Shaier
+
