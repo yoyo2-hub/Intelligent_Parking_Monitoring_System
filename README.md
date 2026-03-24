@@ -15,8 +15,11 @@ Spatial Stability (ORB + Homography): Dynamic ROI recalibration. Even if the cam
 To ensure a stable database and avoid false positives (e.g., vehicles simply driving through an empty spot), we implemented a Smart State Management system:
 State	Condition	Action
 Free (0)	Occupancy < 45%	Spot available (Green)
+
 Progress (1)	Occupancy > 45%	stability_counter starts
+
 Occupied (2)	15 stable frames	Spot confirmed occupied (Red)
+
 --Safety Hysteresis--
 The exit threshold (to switch back from Occupied to Free) is set at 20%.
 The "Why": This prevents "flickering" if the AI briefly loses a part of the vehicle due to reflections or shadows. It guarantees 100% data integrity for the dashboard and reporting.
@@ -40,5 +43,7 @@ pip install -r requirements.txt
 
 **How to use**
 1-Define Spots (ROI Selection): Run the selector script to click and define the 4 corners of each parking spot.
+
 2-Run Monitoring: Execute the main video analysis script.
+
 3-View Dashboard: Open the web interface to track parking status live.
